@@ -12,27 +12,15 @@ function numeroAleatorio() {
     return numero;
 }
 
-const usuarioEsquema = new mongoose.Schema({
+const horariosEsquema = new mongoose.Schema({
    _id: {
       type: Number,
       default: () => numeroAleatorio()
    },
-   nome: {
+   horario: {
       type: String,
-      required: true
-   },
-   email: {
-      type: String,
-      required: true
-   },
-   fone: {
-      type: Number,
-      required: true
-   },
-   data_nascimento: {
-      type: Date,
       required: true
    },
 })
 
-export default mongoose.model('Usuario', usuarioEsquema)
+export default mongoose.model('Horario', horariosEsquema)
