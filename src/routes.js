@@ -1,9 +1,11 @@
 import {Router} from "express"
-import { mostrarHorarios, criarHorario} from "./controllers/ControleHorario.js"
+import { buscarUsuarios, criarUsuario, deletarUsuario, editarUsuario } from "./controllers/ControleUsuario.js"
 
 const routes = Router()
 
-routes.get('/', mostrarHorarios)
-routes.post('/', criarHorario)
+routes.get('/', buscarUsuarios)
+routes.post('/', criarUsuario)
+routes.delete('/:id', deletarUsuario)
+routes.put('/:id', editarUsuario)
 
 export default routes
